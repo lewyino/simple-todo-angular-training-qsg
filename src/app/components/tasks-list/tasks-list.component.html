@@ -9,9 +9,9 @@
     >
         {{ tasksList.name }}
     </h3>
-        <app-task
-            *ngFor="let item of tasksList.tasks; let i = index"
-            [task]="item"
-            [first]="i === 0"
-        ></app-task>
+    <app-task
+        *ngFor="let item of tasksList.tasks; let i = index"
+        [task]="item"
+        [first]="i === 0"
+    ></app-task>
 </div>

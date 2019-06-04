@@ -1,37 +1,38 @@
 <h3>Add task with template driven forms</h3>
 <div class="row">
-<div class="col-4">
-    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" class="col-12">
-        <mat-form-field class="col-12">
-            <input
-                matInput
-                placeholder="Title"
-                value=""
-                name="name"
-                ngModel
-                required
-                minlength="3"
-                autocomplete="off"
-            >
-        </mat-form-field>
-        <mat-form-field class="col-12">
-            <mat-label>Type</mat-label>
-            <mat-select
-                ngModel
-                name="type"
-                required
-            >
-                <mat-option *ngFor="let type of taskTypeEnum | keyvalue" [value]="type.value">
-                    {{type.value}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-        <button mat-button class="col-4" type="submit">submit!</button>
-    </form>
-</div>
-<div class="col-4 mt-4">
-    <div class="alert alert-danger col-12" role="alert" *ngIf="error">
-        form error!
+    <div class="col-4">
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" class="col-12">
+            <mat-form-field class="col-12">
+                <input
+                    matInput
+                    placeholder="Title"
+                    value=""
+                    name="title"
+                    ngModel
+                    required
+                    minlength="3"
+                    autocomplete="off"
+                >
+            </mat-form-field>
+            <mat-form-field class="col-12">
+                <mat-label>Type</mat-label>
+                <mat-select
+                    ngModel
+                    name="type"
+                    required
+                >
+                    <mat-option *ngFor="let type of taskTypeEnum | keyvalue" [value]="type.value">
+                        {{type.value}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button mat-button class="col-4" type="submit">submit!</button>
+        </form>
+    </div>
+    <div class="col-4 mt-4">
+        <div class="alert alert-danger col-12" role="alert" *ngIf="error">
+            form error!
+        </div>
     </div>
 </div>
-</div>
+title: {{ myForm.value.title | defaultValue:'no data' }}

@@ -1,0 +1,49 @@
+<div *ngIf="stats" class="col-12">
+    <div class="row">
+        <div class="col-2">
+            TODO: {{stats.todo}}
+        </div>
+        <div class="col-6 pt-1">
+            <div class="progress">
+                <div
+                    class="progress-bar bg-primary"
+                    role="progressbar"
+                    [ngStyle]="{'width': stats.todoPercent + '%'}"
+                >{{stats.todoPercent}}%
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            IN PROGRESS: {{ stats.inProgress }}
+        </div>
+        <div class="col-6 pt-1">
+            <div class="progress">
+                <div
+                    class="progress-bar bg-warning"
+                    role="progressbar"
+                    [ngStyle]="{'width': stats.inProgressPercent + '%'}"
+                >{{stats.inProgressPercent}}%
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            DONE: {{ stats.done }}
+        </div>
+        <div class="col-6 pt-1">
+            <div class="progress">
+                <div
+                    class="progress-bar bg-success"
+                    role="progressbar"
+                    [ngStyle]="{'width': stats.donePercent + '%'}"
+                >{{stats.donePercent}}%
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

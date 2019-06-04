@@ -26,6 +26,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## Server
+
+Application use json-server to persist the data<br>
+npm run server command run json-server<br>
+npm run start:all command run json-server and Angular application
+
 ## RxJS
 
 meet.js Toruń #4 | "Become reactive with RxJS" - Wojciech Trawiński https://www.youtube.com/watch?v=s0KreKg23sw
